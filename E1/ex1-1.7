@@ -1,0 +1,193 @@
+.TH "Terminal Navigation Manual"
+.SH Name
+Ex1: The Command Line
+.SH Synopsis
+.PP
+The goal of this exercise is to familiarize myself with the linux command line.
+After it is completed, I will be able to create, move, archive, and compress files and directories.
+.PP
+.SH Description
+/home/reptilian/miller_nicholas
+.RS
+.PP
+The first step of the exercise was to move to the /home/reptilian directory and create a new directory with the name lastname_firstname.
+To accomplish this, I executed the command:
+.PP
+.RS
+mkdir miller_nicholas
+.RE
+.PP
+.PP
+.PP
+The general form of the mkdir command is as follows:
+.PP
+.RS
+mkdir
+.IR directory_name
+.RE
+.PP
+The mkdir command will create a new directory within your current working directory, where the directory name provided will be the name of the directory created.
+In the case of this exercise the directory name was
+.B miller_nicholas
+.PP
+.RE
+
+drivers/usb/gadget/configfs.c
+.RS
+.PP
+The next step of the exercise was to move into the reptilian kernerl root directory and search all files for a reference to the pattern
+.B android_dev.
+To accomplish this task, I executed the command:
+.PP
+.RS
+grep -r -l android_dev
+.RE
+.PP
+.PP
+.PP
+The
+.B r
+option was used to conduct the search within the working directory and all of its subdirectories.
+.nf
+.fi
+The
+.B *
+option was used to only return the file paths where a reference was found.
+.PP
+.PP
+The general form of the command is as follows:
+.PP
+.RS
+grep [\-options] [search_pattern]
+.IR file_names(s)
+[\-arguments]
+.RE
+.PP
+This command will search for any references of the pattern in all files in the working directory.
+The results of this command will search for a reference to the pattern provide in all files names provided in the working director.
+.PP
+.PP
+.PP
+.RE
+
+Piping grep Results
+.RS
+.PP
+The next step of the exercise was to pipe the results of the grep command from the previous step into a text file.
+To accomplish this, I added the
+.B ""> ex1.txt""
+argument following the grep command from the previous step.
+This argument will pipe any results that the command preceding it returns to the console into a text file.
+In the case of this exercise the file name was ex1.txt.
+.PP
+.RE
+
+Screenshoting
+.RS
+.PP
+To create the screen shots I needed for steps 2 and 3, I used the Windows 10 Snipping Tool.
+With the Snippin Tool, I could easily take a screenshot of the input and output of my Ubuntu session.
+.PP
+.RE
+
+/usr/rep/src/reptilian-kernel/ex1.txt to /home/reptilain/miller_nicholas/ex1.txt
+.RS
+.PP
+The next step of the exercise was to move the ex1.txt into the directory created in step 1.
+To accomplish this, I executed the command:
+.PP
+.RS
+mv ex1.txt /home/reptilian/miller_nicholas
+.RE
+.PP
+.PP
+.PP
+The general form of the mv command is as follows:
+.PP
+.RS
+mv
+.IR file_path
+.IR directory_path
+.RE
+.PP
+Where the file path is the file to be moved and the directory path is the location the file will be moved to.
+In this case of Ex1, ex1.txt was moved from the root of the reptilian kernel to the directory created in step 1.
+.PP
+.RE
+
+/home/reptilian/miller_nicholas to /home/reptilian/ex1.tar
+.RS
+.PP
+The next step of the exercise was to archive the directory I created in step 1 containing the text file created from the grep command piping.
+To accomplish this, I used the
+.B tar
+command learned in the file packing part of Ex0.
+.PP
+.PP
+The full command I used to archive the file was
+.PP
+.RS
+tar -cvf ex1.tar miller_nicholas
+.RE
+.PP
+This command created an archival file containing the miller_nicholas directory and all of its contents (i.e. ex1.txt)
+Before executing the command, I made sure my working directory was /home/reptilian by executing
+.B pwd.
+This was done to make sure I was archiving the correct directory.
+.PP
+.RE
+
+/home/reptilian/ex1.tar to /home/reptilian/ex1.tar.gz
+.RS
+.PP
+The final step of the exercise was to zip the archive file created using the tar command.
+To zip ex1.tar, I used the
+.B gzip
+command learned in the file packing section of the exercise.
+.PP
+.PP
+The full command I executed was:
+.PP
+.RS
+gzip ex1.tar
+.RE
+.PP
+This command created a compressed version of the archive file created in the previous step and named it ex1.tar.gz.
+After this command was done executing I was left with a compressed archival file that contained the directory created in step 1, which contained ex1.txt.
+.PP
+.PP
+The general form of the gzip command is as follows:
+.PP
+.RS
+gzip
+.IR file_name
+.RE
+.PP
+This command compressed the file specified in the command.
+In this case of this exercise the file was
+.B ex1.tar
+and a compressed file named
+.B ex1.tar.gz.
+was created.
+.PP
+.RE
+
+.SH Testing
+.PP
+No real tesing was necessary for this exercise. The only "Testing" conducted was to make sure I was in the correct directories.
+.PP
+
+.SH Bugs
+.PP
+No bugs were found while doing Ex1.
+.PP
+
+.SH Screencast
+.PP
+No screencast was required of the exercise.
+.PP
+
+.SH Author
+.PP
+Nicholas Miller, 6218\-3408
+.PP

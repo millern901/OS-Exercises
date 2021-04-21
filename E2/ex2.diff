@@ -1,0 +1,13 @@
+diff --git a/init/main.c b/init/main.c
+index 02f6b6bd6a17..7c8ca5b618c1 100644
+--- a/init/main.c
++++ b/init/main.c
+@@ -1108,7 +1108,7 @@ static int __ref kernel_init(void *unused)
+ 
+ 	system_state = SYSTEM_RUNNING;
+ 	numa_default_policy();
++	printk(KERN_ERR "\n### Nicholas Miller (Exercise 2) ###\n\n");
+-	printk(KERN_ERR "\n##### Nicholas Miller (UFID: 6218-3408) Gotta Catch Em All! #####\n\n");
+ 	rcu_end_inkernel_boot();
+ 
+ 	if (ramdisk_execute_command) {
